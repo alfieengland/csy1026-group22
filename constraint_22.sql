@@ -36,6 +36,18 @@ ALTER TABLE hotels
 ADD CONSTRAINT pk_hotel
 PRIMARY KEY (hotel_id);
 
+ALTER TABLE bills
+ADD CONSTRAINT pk_bills
+PRIMARY KEY (invoice_id);
+
+ALTER TABLE teams
+ADD CONSTRAINT pk_team
+PRIMARY KEY (team_id);
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT pk_holiday_detail
+PRIMARY KEY (holiday_detail_id);
+
 -- Foreign Keys
 ALTER TABLE customer_payments
 ADD CONSTRAINT fk_cp_payment_method
@@ -76,3 +88,28 @@ ALTER TABLE locations
 ADD CONSTRAINT fk_l_hotel
 FOREIGN KEY (hotel_id)
 REFERENCES hotels (hotel_id);
+
+ALTER TABLE bills
+ADD CONSTRAINT fk_cp_bill
+FOREIGN KEY (customer_payment_id)
+REFERENCES customer_payments (customer_payment_id);
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT fk_hol_hd
+FOREIGN KEY (holiday_id)
+REFERENCES  holidays(holiday_id);
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT fk_hot_hd
+FOREIGN KEY (hotel_id)
+REFERENCES  hotels (hotel_id);
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT fk_fl_hd
+FOREIGN KEY (flight_id)
+REFERENCES  flights (flight_id);
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT fk_bo_hd
+FOREIGN KEY (board_id)
+REFERENCES  boards (board_id);

@@ -91,3 +91,31 @@ arrival_date DATE,
 departure_date DATE,
 location_id NUMBER(10)
 );
+
+CREATE TABLE bills (
+invoice_id NUMBER(10),
+customer_firstname VARCHAR2(25),
+customer_surname VARCHAR2(25),
+total_payment NUMBER(3),
+date_of_payment DATE,
+billing_address VARCHAR2(50),
+customer_payment_id NUMBER(10)
+);
+
+CREATE TABLE teams (
+team_id NUMBER(10),
+team_name VARCHAR2(15),
+team_description VARCHAR2(50)
+);
+
+CREATE TABLE holiday_details (
+holiday_detail_id NUMBER(10),
+total_price NUMBER(3),
+arrival_date DATE,
+departure_date DATE,
+country VARCHAR2(25),
+holiday_id NUMBER(10),
+hotel_id NUMBER(10),
+flight_id NUMBER(10),
+board_id NUMBER(10)
+);
