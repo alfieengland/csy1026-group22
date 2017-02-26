@@ -11,12 +11,12 @@ ALTER TABLE holidays
 DROP CONSTRAINT fk_hol_customer;
 
 ALTER TABLE holidays
-DROP CONSTRAINT fk_hol_bills;
+DROP CONSTRAINT fk_hol_bill;
 
 ALTER TABLE holidays
 DROP CONSTRAINT fk_hol_sales_rep;
 
-ALTER TABLE sale_reps
+ALTER TABLE sales_reps
 DROP CONSTRAINT fk_sr_team;
 
 ALTER TABLE locations
@@ -57,7 +57,7 @@ ALTER TABLE sales_reps
 DROP CONSTRAINT pk_sales_rep;
 
 ALTER TABLE payment_methods
-DROP CONSTRAINT pk_method_id;
+DROP CONSTRAINT pk_payment_method;
 
 ALTER TABLE customers
 DROP CONSTRAINT pk_customer;
@@ -88,5 +88,6 @@ DROP TABLE customers;
 DROP TABLE locations;
 DROP TABLE bills;
 DROP TABLE teams;
+DROP TABLE hotels;
 DROP TABLE holiday_details;
 PURGE RECYCLEBIN;

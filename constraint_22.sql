@@ -37,7 +37,7 @@ ADD CONSTRAINT pk_hotel
 PRIMARY KEY (hotel_id);
 
 ALTER TABLE bills
-ADD CONSTRAINT pk_bills
+ADD CONSTRAINT pk_bill
 PRIMARY KEY (invoice_id);
 
 ALTER TABLE teams
