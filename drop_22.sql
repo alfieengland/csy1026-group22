@@ -90,4 +90,18 @@ DROP TABLE bills;
 DROP TABLE teams;
 DROP TABLE hotels;
 DROP TABLE holiday_details;
+
+-- Sequence Drops
+DROP SEQUENCE seq_bill_id;
+DROP SEQUENCE seq_board_id;
+DROP SEQUENCE seq_c_id;
+DROP SEQUENCE seq_l_id;
+DROP SEQUENCE seq_l_coutid;
+DROP SEQUENCE seq_l_hotid;
+DROP SEQUENCE seq_h_hotid;
+DROP SEQUENCE seq_h_lotid;
+DROP SEQUENCE seq_payment_methods;
+DROP SEQUENCE seq_flights;
+DROP SEQUENCE seq_teams;
+
 PURGE RECYCLEBIN;

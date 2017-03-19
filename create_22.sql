@@ -17,8 +17,8 @@ customer_id             NUMBER(10)
 
 CREATE TABLE flights(
 flight_id               NUMBER(10),
-departure_id            NUMBER(10),
-arrival_id              NUMBER(10),
+departure_id            VARCHAR2(10),
+arrival_id              VARCHAR2(10),
 arrival_location        VARCHAR2(40),
 departure_location      VARCHAR2(40),
 arrival_date            DATE,
@@ -65,7 +65,7 @@ customer_sname VARCHAR2(25),
 address_line1 VARCHAR2(40),
 town VARCHAR2(40),
 county VARCHAR2(40),
-postcode VARCHAR2(7),
+postcode VARCHAR2(8),
 country VARCHAR2(40),
 contact_number NUMBER(11),
 email VARCHAR2(30),
@@ -84,11 +84,7 @@ area VARCHAR2(25)
 CREATE TABLE hotels (
 hotel_id NUMBER(10),
 hotel_name VARCHAR2(25),
-room_id NUMBER(10),
-room_name VARCHAR2(25),
-room_capacity NUMBER(1),
-arrival_date DATE,
-departure_date DATE,
+room_quantity NUMBER(2),
 location_id NUMBER(10)
 );
 
@@ -96,7 +92,7 @@ CREATE TABLE bills (
 invoice_id NUMBER(10),
 customer_firstname VARCHAR2(25),
 customer_surname VARCHAR2(25),
-total_payment NUMBER(3),
+total_payment NUMBER(4),
 date_of_payment DATE,
 billing_address VARCHAR2(50),
 customer_payment_id NUMBER(10)
@@ -119,3 +115,47 @@ hotel_id NUMBER(10),
 flight_id NUMBER(10),
 board_id NUMBER(10)
 );
+
+CREATE SEQUENCE seq_bill_id
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_board_id
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_c_id
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_l_id
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_l_coutid
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_l_hotid
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_h_hotid
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_h_lotid
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_payment_methods
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_flights
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_teams
+INCREMENT BY 1
+START WITH 1;
