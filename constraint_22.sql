@@ -84,11 +84,6 @@ ADD CONSTRAINT fk_hot_location
 FOREIGN KEY (location_id)
 REFERENCES locations (location_id);
 
-ALTER TABLE locations
-ADD CONSTRAINT fk_l_hotel
-FOREIGN KEY (hotel_id)
-REFERENCES hotels (hotel_id);
-
 ALTER TABLE bills
 ADD CONSTRAINT fk_cp_bill
 FOREIGN KEY (customer_payment_id)

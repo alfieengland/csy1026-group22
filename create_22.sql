@@ -66,25 +66,22 @@ address_line1 VARCHAR2(40),
 town VARCHAR2(40),
 county VARCHAR2(40),
 postcode VARCHAR2(8),
-country VARCHAR2(40),
-contact_number NUMBER(11),
+c_country VARCHAR2(40),
+contact_number VARCHAR2(11),
 email VARCHAR2(30),
 gender CHAR
 );
 
 CREATE TABLE locations (
 location_id NUMBER(10),
-country_id NUMBER(10),
 country VARCHAR(25),
-hotel_id NUMBER(10),
-hotel_name VARCHAR2(25),
 area VARCHAR2(25)
 );
 
 CREATE TABLE hotels (
 hotel_id NUMBER(10),
 hotel_name VARCHAR2(25),
-room_quantity NUMBER(2),
+room_count NUMBER(2),
 location_id NUMBER(10)
 );
 

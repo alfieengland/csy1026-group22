@@ -19,9 +19,6 @@ DROP CONSTRAINT fk_hol_sales_rep;
 ALTER TABLE sales_reps
 DROP CONSTRAINT fk_sr_team;
 
-ALTER TABLE locations
-DROP CONSTRAINT fk_l_hotel;
-
 ALTER TABLE hotels
 DROP CONSTRAINT fk_hot_location;
 

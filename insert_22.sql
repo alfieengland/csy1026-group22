@@ -15,7 +15,7 @@ INSERT INTO customers
 VALUES (seq_c_id.NEXTVAL, 'MISS', 'ALAN', 'MEADE',
 'STEAVE ROAD', 'NORTHAMPTON', 'NORTHAMPTONSHIRE',
 'NN2 3FM', 'UNITED KINGDOM', '07000000002',
-'ALANMEADE@EMAIL.COM', 'M');
+'ALANMEADE@EMAIL.COM', 'F');
 
 INSERT INTO customers
 VALUES (seq_c_id.NEXTVAL, 'MR', 'ALFIE', 'ENGLAND',
@@ -30,39 +30,34 @@ VALUES (seq_c_id.NEXTVAL, 'MR', 'THOMAS', 'WEAVER',
 'THOMASWEAVER@EMAIL.COM', 'M');
 
 INSERT INTO locations
-VALUES (seq_l_id.NEXTVAL, seq_l_coutid.NEXTVAL, 'SPAIN',
-seq_l_hotid.NEXTVAL, 'BUMBALATTE', 'COAST');
+VALUES (seq_l_id.NEXTVAL, 'SPAIN', 'COAST');
 
 INSERT INTO locations
-VALUES (seq_l_id.NEXTVAL, seq_l_coutid.NEXTVAL, 'MALTA',
-seq_l_hotid.NEXTVAL, 'JEFF', 'COAST');
+VALUES (seq_l_id.NEXTVAL, 'MALTA', 'COAST');
 
 INSERT INTO locations
-VALUES (seq_l_id.NEXTVAL, seq_l_coutid.NEXTVAL, 'NETHERLANDS',
-seq_l_hotid.NEXTVAL, 'DANKL', 'URBAN');
+VALUES (seq_l_id.NEXTVAL, 'NETHERLANDS', 'URBAN');
 
 INSERT INTO locations
-VALUES (seq_l_id.NEXTVAL, seq_l_coutid.NEXTVAL, 'FRANCE',
-seq_l_hotid.NEXTVAL, 'KING LOUIE', 'URBAN');
+VALUES (seq_l_id.NEXTVAL, 'FRANCE', 'URBAN');
 
 INSERT INTO locations
-VALUES (seq_l_id.NEXTVAL, seq_l_coutid.NEXTVAL, 'CHINA',
-seq_l_hotid.NEXTVAL, 'HARRY', 'COAST');
+VALUES (seq_l_id.NEXTVAL, 'TURKEY', 'COAST');
 
 INSERT INTO hotels
-VALUES (seq_h_hotid.NEXTVAL, 'BUMBALATTE', 40, seq_h_lotid.NEXTVAL);
+VALUES (seq_h_hotid.NEXTVAL, 'BUMBALATTE', 40, 0000000001);
 
 INSERT INTO hotels
-VALUES (seq_h_hotid.NEXTVAL, 'JEFF', 40, seq_h_lotid.NEXTVAL);
+VALUES (seq_h_hotid.NEXTVAL, 'JEFF', 40, 0000000002);
 
 INSERT INTO hotels
-VALUES (seq_h_hotid.NEXTVAL, 'DANKL', 40, seq_h_lotid.NEXTVAL);
+VALUES (seq_h_hotid.NEXTVAL, 'DANKL', 40, 0000000003);
 
 INSERT INTO hotels
-VALUES (seq_h_hotid.NEXTVAL, 'KING LOUIE', 40, seq_h_lotid.NEXTVAL);
+VALUES (seq_h_hotid.NEXTVAL, 'KING LOUIE', 40, 0000000004);
 
 INSERT INTO hotels
-VALUES (seq_h_hotid.NEXTVAL, 'HARRY', 40, seq_h_lotid.NEXTVAL);
+VALUES (seq_h_hotid.NEXTVAL, 'HARRY', 40, 0000000005);
 
 INSERT INTO boards
 VALUES(seq_board_id.NEXTVAL, 'Y', 'Y', 'Y', 'Y', 'Y', 'Y');
