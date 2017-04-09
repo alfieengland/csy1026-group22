@@ -106,10 +106,11 @@ team_description VARCHAR2(50)
 
 CREATE TABLE holiday_details (
 holiday_detail_id NUMBER(10),
-total_price NUMBER(3),
+total_price NUMBER(4),
 arrival_date DATE,
 departure_date DATE,
 country VARCHAR2(25),
+holiday_provider_email VARCHAR2(30),
 holiday_id NUMBER(10),
 hotel_id NUMBER(10),
 flight_id NUMBER(10),
@@ -157,5 +158,21 @@ INCREMENT BY 1
 START WITH 1;
 
 CREATE SEQUENCE seq_teams
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_holiday_details
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_sales_reps
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_holidays
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_customer_payments
 INCREMENT BY 1
 START WITH 1;

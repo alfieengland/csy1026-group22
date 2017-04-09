@@ -40,6 +40,9 @@ DROP CONSTRAINT fk_fl_hd;
 ALTER TABLE holiday_details
 DROP CONSTRAINT fk_bo_hd;
 
+ALTER TABLE holiday_details
+DROP CONSTRAINT fk_;
+
 -- Primary Key Drops
 ALTER TABLE customer_payments
 DROP CONSTRAINT pk_customer_payment;
@@ -103,5 +106,9 @@ DROP SEQUENCE seq_h_lotid;
 DROP SEQUENCE seq_payment_methods;
 DROP SEQUENCE seq_flights;
 DROP SEQUENCE seq_teams;
+DROP SEQUENCE seq_holiday_details;
+DROP SEQUENCE seq_sales_reps;
+DROP SEQUENCE seq_holidays;
+DROP SEQUENCE seq_customer_payments;
 
 PURGE RECYCLEBIN;
