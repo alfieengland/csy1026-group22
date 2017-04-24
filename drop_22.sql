@@ -1,5 +1,4 @@
 -- CSY2026 Group 22 Assignment Drops
-
 -- Foreign Key Drops
 ALTER TABLE customer_payments
 DROP CONSTRAINT fk_cp_payment_method;
