@@ -161,3 +161,34 @@ START WITH 1;
 CREATE SEQUENCE seq_customer_payments
 INCREMENT BY 1
 START WITH 1;
+
+-- Defaults
+ALTER TABLE customers
+MODIFY c_country DEFAULT 'UK';
+
+ALTER TABLE customers
+MODIFY gender DEFAULT 'M'
+
+ALTER TABLE sales_reps
+MODIFY gender DEFAULT 'M';
+
+ALTER TABLE boards
+MODIFY self_catered DEFAULT 'N';
+
+ALTER TABLE boards
+MODIFY breakfast DEFAULT 'Y';
+
+ALTER TABLE boards
+MODIFY lunch DEFAULT 'Y';
+
+ALTER TABLE boards
+MODIFY dinner DEFAULT 'Y';
+
+ALTER TABLE boards
+MODIFY all_inclusive DEFAULT 'N';
+
+ALTER TABLE boards
+MODIFY first_class DEFAULT 'N';
+
+ALTER TABLE flights
+MODIFY departure_location DEFAULT 'UK';
