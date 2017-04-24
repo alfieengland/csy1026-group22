@@ -3,6 +3,10 @@
 SELECT *
 FROM hotels;
 
+SELECT hotel_name, room_count
+FROM hotels
+ORDER BY room_count DESC;
+
 -- Customers
 SELECT DISTINCT gender
 FROM customers;
@@ -38,10 +42,31 @@ SELECT customer_id, title, customer_fname, customer_sname
 FROM customers
 WHERE town NOT LIKE 'NORTHAMPTON';
 
+SELECT customer_id, customer_fname, customer_sname, email
+FROM customers
+ORDER BY 2, 4;
+
+SELECT customer_sname, customer_fname
+FROM customers
+ORDER BY customer_sname ASC;
+
 -- Locations
 SELECT *
 FROM locations
 WHERE area LIKE 'U%';
+
+SELECT country, hotel_name
+FROM locations INNER JOIN hotels
+ON locations.location_id = hotels.location_id;
+
+SELECT country, hotel_name
+FROM locations FULL OUTER JOIN hotels
+ON locations.location_id = hotels.location_id;
+
+SELECT hotel_name, room_count
+FROM locations JOIN hotels
+ON locations.location_id = hotels.location_id
+WHERE room_count > 40;
 
 -- Bills
 SELECT date_of_payment
