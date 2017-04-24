@@ -108,3 +108,34 @@ ALTER TABLE holiday_details
 ADD CONSTRAINT fk_bo_hd
 FOREIGN KEY (board_id)
 REFERENCES  boards (board_id);
+
+-- Defaults
+ALTER TABLE customers
+MODIFY c_country DEFAULT 'UK';
+
+ALTER TABLE customers
+MODIFY gender DEFAULT 'M'
+
+ALTER TABLE sales_reps
+MODIFY gender DEFAULT 'M';
+
+ALTER TABLE boards
+MODIFY self_catered DEFAULT 'N';
+
+ALTER TABLE boards
+MODIFY breakfast DEFAULT 'Y';
+
+ALTER TABLE boards
+MODIFY lunch DEFAULT 'Y';
+
+ALTER TABLE boards
+MODIFY dinner DEFAULT 'Y';
+
+ALTER TABLE boards
+MODIFY all_inclusive DEFAULT 'N';
+
+ALTER TABLE boards
+MODIFY first_class DEFAULT 'N';
+
+ALTER TABLE flights
+MODIFY departure_location DEFAULT 'UK';
