@@ -1,4 +1,5 @@
 -- CSY2026 Group 22 Assignment Creates
+-- Tables
 CREATE TABLE customer_payments(
 customer_payment_id     NUMBER(10),
 customer_id             NUMBER(10),
@@ -35,7 +36,7 @@ card_company VARCHAR2(10)
 );
 
 CREATE TABLE sales_reps(
-sales_rep_id NUMBER  (10),
+sales_rep_id NUMBER(10),
 title VARCHAR2(4),
 sales_rep_firstname VARCHAR2(15),
 sales_rep_surname VARCHAR2(20),
@@ -47,7 +48,7 @@ data_joined DATE,
 team_id NUMBER(10)
 );
 
-CREATE TABLE boards (
+CREATE TABLE boards(
 board_id NUMBER(10),
 self_catered CHAR,
 breakfast CHAR,
@@ -57,7 +58,7 @@ all_inclusive CHAR,
 first_class CHAR
 );
 
-CREATE TABLE customers (
+CREATE TABLE customers(
 customer_id NUMBER(10),
 title VARCHAR(4),
 customer_fname VARCHAR2(25),
@@ -78,14 +79,14 @@ country VARCHAR(25),
 area VARCHAR2(25)
 );
 
-CREATE TABLE hotels (
+CREATE TABLE hotels(
 hotel_id NUMBER(10),
 hotel_name VARCHAR2(25),
 room_count NUMBER(2),
 location_id NUMBER(10)
 );
 
-CREATE TABLE bills (
+CREATE TABLE bills(
 invoice_id NUMBER(10),
 customer_firstname VARCHAR2(25),
 customer_surname VARCHAR2(25),
@@ -95,13 +96,13 @@ billing_address VARCHAR2(50),
 customer_payment_id NUMBER(10)
 );
 
-CREATE TABLE teams (
+CREATE TABLE teams(
 team_id NUMBER(10),
 team_name VARCHAR2(15),
 team_description VARCHAR2(50)
 );
 
-CREATE TABLE holiday_details (
+CREATE TABLE holiday_details(
 holiday_detail_id NUMBER(10),
 total_price NUMBER(4),
 arrival_date DATE,
@@ -114,6 +115,7 @@ flight_id NUMBER(10),
 board_id NUMBER(10)
 );
 
+-- Sequences
 CREATE SEQUENCE seq_bill_id
 INCREMENT BY 1
 START WITH 1;

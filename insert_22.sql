@@ -30,7 +30,7 @@ VALUES (seq_c_id.NEXTVAL, 'MR', 'THOMAS', 'WEAVER',
 'SA12 ME4', 'UNITED KINGDOM', '07000000004',
 'THOMASWEAVER@EMAIL.COM', 'M');
 
--- Location
+-- Locations
 INSERT INTO locations
 VALUES (seq_l_id.NEXTVAL, 'SPAIN', 'COAST');
 

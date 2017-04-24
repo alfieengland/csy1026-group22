@@ -1,7 +1,9 @@
 -- CSY2026 Group 22 Assignment Queries
+-- Hotels
 SELECT *
 FROM hotels;
 
+-- Customers
 SELECT DISTINCT gender
 FROM customers;
 
@@ -36,6 +38,16 @@ SELECT customer_id, title, customer_fname, customer_sname
 FROM customers
 WHERE town NOT LIKE 'NORTHAMPTON';
 
+-- Locations
 SELECT *
 FROM locations
 WHERE area LIKE 'U%';
+
+-- Bills
+SELECT date_of_payment
+FROM bills
+WHERE date_of_payment BETWEEN '01/JAN/2017' AND '01/JAN/2018';
+
+SELECT customer_firstname, customer_surname
+FROM bills
+ORDER BY customer_firstname DESC;

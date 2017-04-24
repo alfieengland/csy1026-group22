@@ -102,4 +102,5 @@ DROP SEQUENCE seq_sales_reps;
 DROP SEQUENCE seq_holidays;
 DROP SEQUENCE seq_customer_payments;
 
+-- Permanently Empty Recylcebin of all Dropped Files
 PURGE RECYCLEBIN;
