@@ -96,7 +96,6 @@ VALUES (seq_payment_methods.NEXTVAL,8794762727583739,
 'VISA DEBIT','BARCLAYS');
 
 -- CUSTOMER PAYMENTS
-
 INSERT INTO customer_payments
 VALUES (seq_customer_payments.NEXTVAL, 000000001, 000000003, '600', 'Y', '13/JAN/2017');
 
