@@ -1,32 +1,24 @@
 -- CSY2026 Group 22 Assignment Constraints
 -- Primary Keys
-ALTER TABLE customer_payments
-ADD CONSTRAINT pk_customer_payment
-PRIMARY KEY (customer_payment_id);
-
-ALTER TABLE holidays
-ADD CONSTRAINT pk_holiday
-PRIMARY KEY (holiday_id);
-
-ALTER TABLE flights
-ADD CONSTRAINT pk_flight
-PRIMARY KEY (flight_id);
-
 ALTER TABLE payment_methods
 ADD CONSTRAINT pk_payment_method
 PRIMARY KEY (payment_id);
 
-ALTER TABLE sales_reps
-ADD CONSTRAINT pk_sales_rep
-PRIMARY KEY (sales_rep_id);
+ALTER TABLE customers
+ADD CONSTRAINT pk_customer
+PRIMARY KEY (customer_id);
+
+ALTER TABLE teams
+ADD CONSTRAINT pk_team
+PRIMARY KEY (team_id);
 
 ALTER TABLE boards
 ADD CONSTRAINT pk_board
 PRIMARY KEY (board_id);
 
-ALTER TABLE customers
-ADD CONSTRAINT pk_customer
-PRIMARY KEY (customer_id);
+ALTER TABLE flights
+ADD CONSTRAINT pk_flight
+PRIMARY KEY (flight_id);
 
 ALTER TABLE locations
 ADD CONSTRAINT pk_location
@@ -36,13 +28,21 @@ ALTER TABLE hotels
 ADD CONSTRAINT pk_hotel
 PRIMARY KEY (hotel_id);
 
+ALTER TABLE sales_reps
+ADD CONSTRAINT pk_sales_rep
+PRIMARY KEY (sales_rep_id);
+
+ALTER TABLE customer_payments
+ADD CONSTRAINT pk_customer_payment
+PRIMARY KEY (customer_payment_id);
+
 ALTER TABLE bills
 ADD CONSTRAINT pk_bill
 PRIMARY KEY (invoice_id);
 
-ALTER TABLE teams
-ADD CONSTRAINT pk_team
-PRIMARY KEY (team_id);
+ALTER TABLE holidays
+ADD CONSTRAINT pk_holiday
+PRIMARY KEY (holiday_id);
 
 ALTER TABLE holiday_details
 ADD CONSTRAINT pk_holiday_detail
@@ -139,3 +139,13 @@ MODIFY first_class DEFAULT 'N';
 
 ALTER TABLE flights
 MODIFY departure_location DEFAULT 'UK';
+
+-- Uniques
+ALTER TABLE customers
+ADD CONSTRAINT uc_customers UNIQUE (c_email);
+
+ALTER TABLE sales_reps
+ADD CONSTRAINT uc_sales_rep UNIQUE (sr_email);
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT uc_holiday_details UNIQUE (holiday_provider_email);

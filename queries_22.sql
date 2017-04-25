@@ -14,23 +14,23 @@ FROM customers;
 SELECT DISTINCT c_country
 FROM customers;
 
-SELECT title, customer_fname, customer_sname, contact_number, email
+SELECT title, customer_fname, customer_sname, contact_number, c_email
 FROM customers
 WHERE customer_id = 0000000001;
 
-SELECT title, customer_fname, customer_sname, contact_number, email
+SELECT title, customer_fname, customer_sname, contact_number, c_email
 FROM customers
 WHERE customer_id = 0000000002;
 
-SELECT title, customer_fname, customer_sname, contact_number, email
+SELECT title, customer_fname, customer_sname, contact_number, c_email
 FROM customers
 WHERE customer_id = 0000000003;
 
-SELECT title, customer_fname, customer_sname, contact_number, email
+SELECT title, customer_fname, customer_sname, contact_number, c_email
 FROM customers
 WHERE customer_id = 0000000004;
 
-SELECT title, customer_fname, customer_sname, contact_number, email
+SELECT title, customer_fname, customer_sname, contact_number, c_email
 FROM customers
 WHERE customer_id = 0000000005;
 
@@ -42,7 +42,7 @@ SELECT customer_id, title, customer_fname, customer_sname
 FROM customers
 WHERE town NOT LIKE 'NORTHAMPTON';
 
-SELECT customer_id, customer_fname, customer_sname, email
+SELECT customer_id, customer_fname, customer_sname, c_email
 FROM customers
 ORDER BY 2, 4;
 
